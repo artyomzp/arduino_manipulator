@@ -2,7 +2,12 @@
 
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="arduinobot">
 
-    <xacro:property name="PI" value="3.1459"/>
+    <xacro:arg name="is_ignition" default="true"/>
+
+    <xacro:include filename="$(find arduinobot_description)/urdf/arduinobot_gazebo.xacro"/>
+    <xacro:include filename="$(find arduinobot_description)/urdf/arduinobot_ros2_control.xacro"/>
+
+    <xacro:property name="PI" value="3.14159263359"/>
     <xacro:property name="effort" value="30.0"/>
     <xacro:property name="velocity" value="10.0"/>
 
